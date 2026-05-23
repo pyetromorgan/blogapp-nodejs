@@ -6,7 +6,7 @@
 
 Mecanismo completo de blog dinâmico desenvolvido em Node.js com arquitetura MVC, focado em alta performance, segurança de rotas por níveis de acesso e persistência de dados em nuvem.
 
-🔗 **Link do Projeto no Ar:** [CLIQUE AQUI PARA ACESSAR] -> (Substitua pelo link azul do Render)
+🔗 **Link do Projeto no Ar:** [CLIQUE AQUI PARA ACESSAR] -> (https://blogapp-nodejs-wfys.onrender.com)
 
 ---
 
