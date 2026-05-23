@@ -8,6 +8,11 @@ const PostagemController = require('../controllers/PostagemController');
 const HomeController = require('../controllers/HomeController');
 const { eAdmin } = require('../helpers/eAdmin');
 
+router.get('/', eAdmin, (req, res) => {
+    res.render("admin/index"); 
+});
+
+
 router.get('/categorias', eAdmin, CategoriaController.listarCategorias);
 router.get('/categorias/add', eAdmin, CategoriaController.formularioAdd);
 
@@ -62,6 +67,5 @@ router.post('/postagens/editar', PostagemController.atualizarPostagem);
 
 router.get('/postagens/deletar/:id', PostagemController.deletarPostagem);
 
-//router.get('/postagem/:slug', HomeController.lerPostagem);
 
 module.exports = router;
