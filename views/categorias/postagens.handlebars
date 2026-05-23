@@ -1,0 +1,21 @@
+<div class="mt-4">
+    <h1>Categoria: {{categoria.nome}}</h1>
+    <hr class="my-4">
+
+    {{#each postagens}}
+        <div class="card mt-4 shadow-sm">
+            <div class="card-body">
+                <h2>{{titulo}}</h2>
+                <p>{{descricao}}</p>
+                <small><b>Publicado em:</b> {{date}}</small>
+                <br><br>
+                <a href="/postagem/{{slug}}" class="btn btn-primary">Ler Postagem</a>
+            </div>
+        </div>
+    {{else}}
+        <div class="alert alert-info mt-4">Nenhuma postagem foi registrada nesta categoria ainda!</div>
+    {{/each}}
+
+    <br>
+    <a href="/categorias" class="btn btn-outline-secondary mb-5">← Voltar para Categorias</a>
+</div>

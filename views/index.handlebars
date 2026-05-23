@@ -1,0 +1,28 @@
+<div class="p-5 mb-4 bg-light rounded-3 mt-4">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Bem-vindo ao Blog de Node.js!</h1>
+        <p class="col-md-8 fs-4">Fique por dentro das melhores notícias, tutoriais e artigos sobre desenvolvimento de software e JavaScript.</p>
+        <hr class="my-4">
+        <p>Quer colaborar com conteúdo? Crie sua conta agora mesmo.</p>
+        <a class="btn btn-primary btn-lg" href="/usuarios/registro" role="button">Criar uma conta</a>
+    </div>
+</div>
+
+<hr>
+<h3>Postagens Recentes:</h3>
+
+{{#each postagens}}
+    <div class="card mt-4 shadow-sm">
+        <div class="card-body">
+            <h2>{{titulo}}</h2>
+            <p>{{descricao}}</p>
+            <hr>
+            <small><b>Categoria:</b> {{categoria.nome}}</small><br>
+            <small><b>Data de publicação:</b> {{date}}</small>
+            <br><br>
+            <a href="/postagem/{{slug}}" class="btn btn-outline-primary">Ler Postagem</a>
+        </div>
+    </div>
+{{else}}
+    <div class="alert alert-warning mt-4">Nenhuma postagem recente foi encontrada!</div>
+{{/each}}

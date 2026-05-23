@@ -1,0 +1,18 @@
+<h2>Editar Categoria</h2>
+<hr>
+
+<form action="/admin/categorias/editar" method="POST">
+    <input type="hidden" name="id" value="{{categoria._id}}">
+
+    <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Nome da categoria" class="form-control" value="{{categoria.nome}}" required>
+    </div>
+
+    <div class="form-group mt-3">
+        <label for="slug">Slug:</label>
+        <input type="text" id="slug" name="slug" placeholder="Slug da categoria" class="form-control" value="{{categoria.slug}}" required>
+    </div>
+
+    <button type="submit" class="btn btn-success mt-4">Salvar Alterações</button>
+</form>
